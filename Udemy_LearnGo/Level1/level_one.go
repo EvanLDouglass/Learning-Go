@@ -91,5 +91,4 @@ func main() {
 
 	fmt.Println("Exercise 5")
 	num5()
-	fmt.Println()
 }
