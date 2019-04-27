@@ -199,6 +199,14 @@ func ex5() {
 	printUsers(users)
 	fmt.Println()
 
+	// Sort each user's sayings
+	for _, v := range users {
+		sort.Strings(v.Sayings)
+	}
+
+	printUsers(users)
+	fmt.Println()
+
 	sort.Sort(byAge(users))
 	printUsers(users)
 	fmt.Println()
