@@ -9,6 +9,16 @@
 {{range .}}
 
 <!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
+    <h1>Year: {{.AcaYear}}</h1>
+    <h2>Term: {{.Fall.Term}}</h2>
+    {{range .Fall.Courses}}
+        <p>{{- .Number}} - {{.Name}} - {{.Units -}}</p>
+    {{end}}
+
+    <h2>Term: {{.Spring.Term}}</h2>
+    {{range .Spring.Courses}}
+        <p>{{- .Number}} - {{.Name}} - {{.Units -}}</p>
+    {{end}}
 
 {{end}}
 

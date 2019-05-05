@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hands-On #3</title>
+</head>
+<body>
+    {{$menu := .}}
+    {{$first := index $menu 1}}
+    <h1>{{$first.RName}} Menus</h1>
+    <div class="menus">
+        {{range $menu}}
+        <div class="menu">
+            <p><strong>Menu: {{.Meal}}</strong></p>
+            {{range $k, $v := .Items}}
+                <p>{{$k}}, {{asPrice $v}}</p>
+            {{end}}
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
